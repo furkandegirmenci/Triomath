@@ -56,13 +56,3 @@ Trio::Number Trio::Number::operator-()
     int tempNum{value};
     return -tempNum;
 }
-
-
-
-/*
-std::istream& operator>>(std::istream& is, Trio::Number& number)
-{
-    is >> number.value;
-    return is;
-}
-*/
