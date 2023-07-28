@@ -8,11 +8,9 @@ namespace Trio
 {
     class Number
     {
-        
-
     public:
-        Number operator+(Number &rhs); // Yanındaki Number tipinden objenin sayısı ile toplar
         int get(); // Tutulan sayıyı gönderir
+        Number operator+(Number &rhs); // Yanındaki Number tipinden objenin sayısı ile toplar
         Number operator-(Number &rhs); // Yanındaki Number tipinden objenin sayısı ile farkını alır
         Number operator*(Number &rhs); // Yanındaki Number tipinden objenin sayısı ile çarpımını alır
         Number operator/(Number &rhs); // Yanındaki Number tipinden objenin sayısı ile bölümünü alır
@@ -23,7 +21,7 @@ namespace Trio
         Number operator-(); //Sayıyı negatif yapar
         Number(int number) : value{number} {} // Sayı verilerek tanımlanması için Constructor
         Number() : value{0} {} // Sayı verilmeden tanımlanması için Constructor
-        ~Number() {}
+        ~Number() {} // Destructor
         friend std::istream& operator>>(std::istream& is, Number& number)// Sayıyı kullanıcının verdiği değer yapar
         {
             is >> number.value;
